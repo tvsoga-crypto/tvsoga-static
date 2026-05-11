@@ -61,3 +61,84 @@
   font-weight: 700;
   transform: rotate(90deg);
 }
+
+/* Replace missing Font Awesome glyphs with static CSS shapes. */
+.counter-box-icon.fontawesome-icon {
+  display: none !important;
+}
+
+.awb-image-hotspots-hotspot i {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 0.7em;
+  font-family: Arial, Helvetica, sans-serif !important;
+  line-height: 1;
+  vertical-align: -0.08em;
+}
+
+.awb-image-hotspots-hotspot i::before {
+  content: "" !important;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.awb-image-hotspots-hotspot .fa-laptop::before {
+  left: 0.08em;
+  top: 0;
+  width: 0.84em;
+  height: 0.52em;
+  border: 0.12em solid currentColor;
+  border-radius: 0.06em;
+}
+
+.awb-image-hotspots-hotspot .fa-laptop::after {
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1em;
+  height: 0.12em;
+  background: currentColor;
+  border-radius: 0.08em;
+}
+
+.awb-image-hotspots-hotspot .fa-tablet-alt::before,
+.awb-image-hotspots-hotspot .fa-mobile-alt::before {
+  left: 50%;
+  top: 50%;
+  width: 0.52em;
+  height: 0.78em;
+  border: 0.12em solid currentColor;
+  border-radius: 0.12em;
+  transform: translate(-50%, -50%);
+}
+
+.awb-image-hotspots-hotspot .fa-mobile-alt::before {
+  width: 0.42em;
+  height: 0.86em;
+}
+
+.fusion-toggle-icon-wrapper .fa-fusion-box {
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.fusion-toggle-icon-wrapper .fa-fusion-box::before {
+  content: "" !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translate(-50%, -65%) rotate(45deg);
+}
+
+.fusion-toggle-icon-wrapper .active-icon::before {
+  transform: translate(-50%, -35%) rotate(225deg);
+}
