@@ -26,6 +26,13 @@
   position: relative;
 }
 
+.collapse-enabled .awb-menu__open-nav-submenu_mobile {
+  min-width: 44px !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  color: #232323 !important;
+}
+
 .awb-menu__open-nav-submenu_mobile::before,
 .awb-menu__open-nav-submenu-hover::before {
   content: "" !important;
@@ -34,8 +41,8 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  border-right: 2px solid #232323;
+  border-bottom: 2px solid #232323;
   transform: translate(-50%, -65%) rotate(45deg);
 }
 
