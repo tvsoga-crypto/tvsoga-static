@@ -163,3 +163,16 @@
         });
     })
 })( jQuery );
+
+(function() {
+    var linkFixes = {
+        "/aiot/": "sogaaiot/index.html",
+        "/megacomposter/": "megacomposter/index.html"
+    };
+
+    Object.keys(linkFixes).forEach(function(from) {
+        document.querySelectorAll('a[href="' + from + '"]').forEach(function(link) {
+            link.setAttribute("href", linkFixes[from]);
+        });
+    });
+})();
