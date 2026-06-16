@@ -41,6 +41,307 @@
       '</li>';
   }
 
+  function injectHeaderStyles() {
+    if (document.getElementById("fusion-builder-template-header-css")) {
+      return;
+    }
+
+    var style = document.createElement("style");
+    style.id = "fusion-builder-template-header-css";
+    style.type = "text/css";
+    style.textContent = [
+      "#top_banner .fusion-countdown .fusion-digit > div {",
+      "  color: white;",
+      "}",
+      "#main_banner .fusion-countdown-counter-wrapper {",
+      "  margin-top: 0;",
+      "  margin-bottom: 0;",
+      "}",
+      "@media only screen and (max-width: 800px) {",
+      "}",
+      ".awb-menu__main-a:hover,",
+      ".awb-menu__main-a a:hover,",
+      ".awb-menu__sub-a:hover,",
+      ".awb-menu__sub-a a:hover {",
+      "  text-weight: bold;",
+      "}",
+      "ul#menu-soga li a {",
+      "  cursor: pointer;",
+      "}",
+      ".fusion-tb-header {",
+      "  position: sticky;",
+      "  top: 0;",
+      "  z-index: 20051;",
+      "  background: #fff;",
+      "}",
+      ".fusion-tb-header ul {",
+      "  list-style: none;",
+      "  margin: 0;",
+      "  padding: 0;",
+      "}",
+      ".fusion-tb-header .avada-main-menu {",
+      "  padding: 0 60px;",
+      "  background: #fff;",
+      "  box-shadow: 0 4px 16px rgba(35, 35, 35, 0.23);",
+      "}",
+      ".fusion-tb-header .fusion-builder-row {",
+      "  display: flex;",
+      "  align-items: center;",
+      "  justify-content: space-between;",
+      "  min-height: 48px;",
+      "  width: 100% !important;",
+      "  max-width: 100% !important;",
+      "  margin: 0 !important;",
+      "}",
+      ".fusion-tb-header .fusion-builder-column-0 {",
+      "  flex: 0 0 auto;",
+      "  padding-left: 10px;",
+      "}",
+      ".fusion-tb-header .fusion-builder-column-1 {",
+      "  flex: 1 1 auto;",
+      "  padding-top: 8px;",
+      "  padding-bottom: 8px;",
+      "}",
+      ".fusion-tb-header .fusion-column-wrapper {",
+      "  display: flex;",
+      "  align-items: center;",
+      "}",
+      ".fusion-tb-header .fusion-builder-column-1 .fusion-column-wrapper {",
+      "  justify-content: flex-end;",
+      "}",
+      ".fusion-tb-header .fusion-image-element {",
+      "  margin: 8px 0;",
+      "  max-width: 73px;",
+      "}",
+      ".fusion-tb-header .fusion-imageframe img {",
+      "  display: block;",
+      "  width: 100%;",
+      "  max-width: 73px;",
+      "  height: auto;",
+      "}",
+      ".fusion-tb-header .awb-menu {",
+      "  position: relative;",
+      "  display: flex;",
+      "  justify-content: flex-end;",
+      "  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif;",
+      "  font-size: 15px;",
+      "}",
+      ".fusion-tb-header .awb-menu__main-ul {",
+      "  display: flex;",
+      "  align-items: center;",
+      "  gap: 2px;",
+      "}",
+      ".fusion-tb-header .menu-item {",
+      "  position: relative;",
+      "}",
+      ".fusion-tb-header .awb-menu__main-a,",
+      ".fusion-tb-header .awb-menu__sub-a {",
+      "  display: flex;",
+      "  align-items: center;",
+      "  justify-content: center;",
+      "  color: var(--awb-color7, #232323);",
+      "  text-decoration: none;",
+      "  white-space: nowrap;",
+      "}",
+      ".fusion-tb-header .awb-menu__main-a {",
+      "  min-height: 48px;",
+      "  padding: 6px 0 6px 32px;",
+      "}",
+      ".fusion-tb-header .awb-menu__main-a:hover,",
+      ".fusion-tb-header .awb-menu__sub-a:hover,",
+      ".fusion-tb-header .current-menu-item > a,",
+      ".fusion-tb-header .current_page_item > a,",
+      ".fusion-tb-header .current-menu-parent > a,",
+      ".fusion-tb-header .current-menu-ancestor > a {",
+      "  color: var(--awb-color8, #000);",
+      "}",
+      ".fusion-tb-header .awb-menu__sub-ul {",
+      "  position: absolute;",
+      "  top: 100%;",
+      "  left: 50%;",
+      "  z-index: 20052;",
+      "  display: none;",
+      "  min-width: 220px;",
+      "  transform: translateX(-50%);",
+      "  background: var(--awb-color2, #f7f7f7);",
+      "  box-shadow: 0 3px 16px rgba(35, 35, 35, 0.23);",
+      "}",
+      ".fusion-tb-header .menu-item:hover > .awb-menu__sub-ul,",
+      ".fusion-tb-header .menu-item:focus-within > .awb-menu__sub-ul,",
+      ".fusion-tb-header .menu-item.expanded > .awb-menu__sub-ul {",
+      "  display: block;",
+      "}",
+      ".fusion-tb-header .awb-menu__sub-a {",
+      "  min-height: 48px;",
+      "  padding: 16px 32px;",
+      "}",
+      ".fusion-tb-header .awb-menu__sub-li .awb-menu__sub-ul_grand {",
+      "  top: 0;",
+      "  left: 100%;",
+      "  transform: none;",
+      "}",
+      ".fusion-tb-header .awb-menu__open-nav-submenu-hover::after {",
+      "  content: \"\";",
+      "  display: inline-block;",
+      "  margin-left: 8px;",
+      "  border-left: 4px solid transparent;",
+      "  border-right: 4px solid transparent;",
+      "  border-top: 5px solid currentColor;",
+      "}",
+      ".fusion-tb-header .awb-menu__m-toggle,",
+      ".fusion-tb-header .awb-menu__open-nav-submenu_mobile {",
+      "  display: none;",
+      "}",
+      ".fusion-tb-header .screen-reader-text {",
+      "  position: absolute;",
+      "  width: 1px;",
+      "  height: 1px;",
+      "  overflow: hidden;",
+      "  clip: rect(1px, 1px, 1px, 1px);",
+      "}",
+      "@media only screen and (max-width: 800px) {",
+      "  .fusion-tb-header .avada-main-menu {",
+      "    padding: 0 30px;",
+      "  }",
+      "  .fusion-tb-header .fusion-builder-row {",
+      "    min-height: 48px;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__m-toggle {",
+      "    display: flex;",
+      "    align-items: center;",
+      "    justify-content: center;",
+      "    width: 44px;",
+      "    height: 44px;",
+      "    margin-left: auto;",
+      "    padding: 0;",
+      "    color: var(--awb-color4, #444);",
+      "    border: 0;",
+      "    background: transparent;",
+      "    font-size: 22px;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__m-collapse-icon-open::before {",
+      "    content: \"☰\";",
+      "  }",
+      "  .fusion-tb-header .awb-menu__m-collapse-icon-close::before {",
+      "    content: \"×\";",
+      "  }",
+      "  .fusion-tb-header .awb-menu__m-collapse-icon-close {",
+      "    display: none;",
+      "  }",
+      "  .fusion-tb-header .awb-menu.expanded .awb-menu__m-collapse-icon-open {",
+      "    display: none;",
+      "  }",
+      "  .fusion-tb-header .awb-menu.expanded .awb-menu__m-collapse-icon-close {",
+      "    display: inline;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__main-ul {",
+      "    position: absolute;",
+      "    top: 48px;",
+      "    right: 0;",
+      "    left: auto;",
+      "    display: none;",
+      "    width: min(360px, calc(100vw - 60px));",
+      "    max-height: calc(100vh - 56px);",
+      "    overflow: auto;",
+      "    background: var(--awb-color2, #f7f7f7);",
+      "    box-shadow: 0 3px 16px rgba(35, 35, 35, 0.23);",
+      "  }",
+      "  .fusion-tb-header .awb-menu.expanded .awb-menu__main-ul {",
+      "    display: block;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__main-a,",
+      "  .fusion-tb-header .awb-menu__sub-a {",
+      "    justify-content: flex-start;",
+      "    min-height: 44px;",
+      "    padding: 13px 44px 13px 20px;",
+      "    white-space: normal;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__sub-ul,",
+      "  .fusion-tb-header .awb-menu__sub-li .awb-menu__sub-ul_grand {",
+      "    position: static;",
+      "    display: none;",
+      "    min-width: 0;",
+      "    transform: none;",
+      "    background: #fff;",
+      "    box-shadow: none;",
+      "  }",
+      "  .fusion-tb-header .menu-item:hover > .awb-menu__sub-ul,",
+      "  .fusion-tb-header .menu-item:focus-within > .awb-menu__sub-ul {",
+      "    display: none;",
+      "  }",
+      "  .fusion-tb-header .menu-item.expanded > .awb-menu__sub-ul {",
+      "    display: block;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__open-nav-submenu_mobile {",
+      "    position: absolute;",
+      "    top: 0;",
+      "    right: 0;",
+      "    display: block;",
+      "    width: 44px;",
+      "    height: 44px;",
+      "    border: 0;",
+      "    background: transparent;",
+      "  }",
+      "  .fusion-tb-header .awb-menu__open-nav-submenu_mobile::before {",
+      "    content: \"+\";",
+      "    color: currentColor;",
+      "    font-size: 20px;",
+      "  }",
+      "  .fusion-tb-header .menu-item.expanded > .awb-menu__open-nav-submenu_mobile::before {",
+      "    content: \"−\";",
+      "  }",
+      "  .fusion-tb-header .awb-menu__open-nav-submenu-hover {",
+      "    display: none;",
+      "  }",
+      "}"
+    ].join("\n");
+    document.head.appendChild(style);
+  }
+
+  function setupHeaderInteractions() {
+    document.querySelectorAll(".fusion-tb-header .awb-menu").forEach(function (nav) {
+      var toggle = nav.querySelector(".awb-menu__m-toggle");
+
+      if (toggle && !toggle.dataset.siteHeaderBound) {
+        toggle.dataset.siteHeaderBound = "true";
+        toggle.addEventListener("click", function () {
+          var isOpen = nav.classList.toggle("expanded");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+
+      nav.querySelectorAll(".awb-menu__open-nav-submenu_mobile").forEach(function (button) {
+        if (button.dataset.siteHeaderBound) {
+          return;
+        }
+
+        button.dataset.siteHeaderBound = "true";
+        button.addEventListener("click", function () {
+          var item = button.closest(".menu-item-has-children");
+          if (!item) {
+            return;
+          }
+
+          var isOpen = item.classList.toggle("expanded");
+          button.setAttribute("aria-expanded", String(isOpen));
+        });
+      });
+    });
+  }
+
+  function normalizeStandaloneHeaderWidth(header) {
+    var row = header.querySelector(".fusion-builder-row");
+
+    if (!row) {
+      return;
+    }
+
+    row.style.setProperty("width", "100%", "important");
+    row.style.setProperty("max-width", "100%", "important");
+    row.style.setProperty("margin-left", "0");
+    row.style.setProperty("margin-right", "0");
+  }
+
   var pages = {
     home: "index.html",
     aiot: "sogaaiot/index.html",
@@ -55,9 +356,11 @@
     tvsogaApp: "tvsoga-app/index.html",
     megaComposterManual: "megacomposter/manual.html",
     megaVisionManual: "megavision/manual.html",
+    fullProducts: "full-products-page-package/index.html",
   };
 
   var productPages = [
+    pages.fullProducts,
     pages.megaMax,
     "mega-max-15%E5%85%AC%E5%8D%87%E5%95%86%E7%94%A8%E5%BB%9A%E9%A4%98%E6%A9%9F/index.html",
     // pages.megaCommercial,
@@ -68,6 +371,7 @@
   ];
   var downloadPages = [pages.megaGreen, pages.tvsogaApp];
   var manualPages = [pages.megaComposter, pages.megaVision, pages.playRemote];
+  var fullProductsActive = isCurrent(pages.fullProducts);
   var megaMaxActive = isCurrent(pages.megaMax) || isCurrent("mega-max-15%E5%85%AC%E5%8D%87%E5%95%86%E7%94%A8%E5%BB%9A%E9%A4%98%E6%A9%9F/index.html");
   var productActive = inSection(productPages);
   var downloadActive = inSection(downloadPages) || inSection(manualPages);
@@ -93,6 +397,7 @@
     '</ul></li>' +
     mainItem("menu-item-6605", "解決方案", url(pages.aiot), isCurrent(pages.aiot)) +
     '<li id="menu-item-2430" class="' + parentClass("a1i0s0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2430 awb-menu__li awb-menu__main-li awb-menu__main-li_regular", productActive) + '" data-classes="a1i0s0" data-item-id="2430"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">商品</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of 商品" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button><ul class="awb-menu__sub-ul awb-menu__sub-ul_main">' +
+    subItem("menu-item-7082", "MEGA 全系列產品", url(pages.fullProducts), fullProductsActive) +
     subItem("menu-item-7082", "MEGA MAX 15公升商用廚餘機", url(pages.megaMax), megaMaxActive) +
     // subItem("menu-item-5730", "MEGA 商用廚餘機", url(pages.megaCommercial), isCurrent(pages.megaCommercial)) +
     subItem("menu-item-7181", "MEGA PRO 5公升家用廚餘機", "https://shop.tvsoga.com/", false) +
@@ -115,7 +420,21 @@
     '<li id="menu-item-4525" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4525 awb-menu__li awb-menu__main-li awb-menu__main-li_regular" data-item-id="4525"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a target="_blank" rel="noopener noreferrer" href="https://mall.tvsoga.com/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">商城</span></a></li>' +
     '</ul></nav></div></div></div></div></div>';
 
+  injectHeaderStyles();
+
   document.querySelectorAll("[data-site-header]").forEach(function (mount) {
-    mount.outerHTML = html;
+    var isStandalone = mount.hasAttribute("data-site-header-standalone");
+    var wrapper = document.createElement("div");
+
+    wrapper.innerHTML = html;
+    var header = wrapper.firstElementChild;
+
+    if (isStandalone && header) {
+      normalizeStandaloneHeaderWidth(header);
+    }
+
+    mount.outerHTML = header ? header.outerHTML : html;
   });
+
+  setupHeaderInteractions();
 })();
